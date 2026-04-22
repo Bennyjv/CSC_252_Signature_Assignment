@@ -62,18 +62,18 @@ void selection_sort(int* values, int size)
     {
         int minIndex = i;
 
-        for (int j = i + 1; j < size; j++)
-        {
+  for (int j = i + 1; j < size; j++)
+   {
             if (values[j] < values[minIndex])
-            {
+     {
                 minIndex = j;
-            }
-        }
+  }
+      }
 
         if (minIndex != i)
-        {
+{
             swap_values(values[i], values[minIndex]);
-        }
+  }
     }
 }
 
@@ -213,16 +213,16 @@ public:
         int duplicateCount = 0;
 
         for (int i = 0; i < size; i++)
-        {
+    {
             for (int j = i + 1; j < size; j++)
-            {
+    {
                 if (values[i] == values[j])
-                {
+    {
                     duplicateCount++;
                     break;
-                }
-            }
-        }
+    }
+   }
+   }
 
         ostringstream output;
         output << "Duplicate values found: " << duplicateCount;
@@ -250,20 +250,20 @@ public:
         {
             bool found = false;
 
-            for (int i = 0; i < size; i++)
-            {
-                if (values[i] == target)
-                {
-                    found = true;
+        for (int i = 0; i < size; i++)
+    {
+          if (values[i] == target)
+  {
+         found = true;
                     break;
-                }
-            }
+}
+    }
 
-            if (!found)
-            {
-                missingCount++;
-            }
-        }
+       if (!found)
+ {
+        missingCount++;
+  }
+    }
 
         ostringstream output;
         output << "Missing values in range 0-999: " << missingCount;
@@ -294,9 +294,9 @@ public:
             int searchValue = rand() % 1000;
 
             if (binary_search(values, searchValue, size) != -1)
-            {
+      {
                 foundCount++;
-            }
+      }
         }
 
         ostringstream output;
@@ -360,14 +360,14 @@ public:
             else
             {
                 if (currentCount > bestCount)
-                {
+        {
                     bestCount = currentCount;
                     mode = currentValue;
-                }
+        }
 
                 currentValue = values[i];
                 currentCount = 1;
-            }
+        }
         }
 
         // check last run
